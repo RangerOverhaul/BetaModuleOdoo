@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<data>
+		<record id="lsv_project.module_category" model="ir.module.category">
+			<field name="name">LSV Project</field>
+	        <field name="description">Main category defines access,rules, etc...</field>
+	        <field name="sequence">4</field>
+	    </record>
+		<record id="lsv_project.manager_group" model="res.groups">
+			<field name="name">LSV Project Manager</field>
+			<field name="category_id" ref="lsv_project.module_category"/>
+			<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/> 
+		</record>
+		<record id="lsv_project.user_group" model="res.groups">
+			<field name="name">LSV Project User</field>
+			<field name="category_id" ref="lsv_project.module_category"/>
+			<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+		</record>
+	</data>
+</odoo>

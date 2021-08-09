@@ -11,6 +11,9 @@ class Endorsement(models.Model):
     Endorsement class
     """
     _name = 'lsv_project.endorsement'
+    
+    _rec_name = "number"
+
     number= fields.Char(string='Number',
 			required=True)
     endorsement_reason_id = fields.Many2one('lsv_project.endorsement_reason',

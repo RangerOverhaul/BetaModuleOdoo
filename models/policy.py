@@ -11,6 +11,9 @@ class Policy(models.Model):
         Policy class
         """
 	_name = 'lsv_project.policy'
+
+	_rec_name = "number"
+	
 	number = fields.Char(string='Number',
 			     		 required=True)
 	project_id = fields.Many2one('project.project',

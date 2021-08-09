@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo> 
+	<data noupdate="1">
+			<record model="lsv_project.policy_type" id="lsv_project.policy_type_1">
+				<field name="name">Polity Type 1</field>
+			</record>
+			<record model="lsv_project.policy_type" id="lsv_project.policy_type_2">
+				<field name="name">Policy Type 2</field>
+			</record>
+			<record model="lsv_project.policy_type" id="lsv_project.policy_type_3">
+				<field name="name">Policy Type 3</field>
+			</record>
+	</data>
+</odoo>

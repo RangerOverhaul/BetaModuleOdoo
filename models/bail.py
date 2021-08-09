@@ -11,6 +11,7 @@ class Bail(models.Model):
      Bail class
     """
     _name = "lsv_project.bail"
+    _rec_name = "number"
     number = fields.Char(string='Number',
 			             required=True)
     issue_date = fields.Date(string='Issue Date',

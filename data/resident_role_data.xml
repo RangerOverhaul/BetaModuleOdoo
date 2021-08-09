@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo> 
+	<data noupdate="1">
+			<record model="lsv_project.resident_role" id="lsv_project.resident_role_1">
+				<field name="name">Resident Role 1</field>
+			</record>
+			<record model="lsv_project.resident_role" id="lsv_project.resident_role_2">
+				<field name="name">EResident Role 2</field>
+			</record>
+			<record model="lsv_project.resident_role" id="lsv_project.resident_role_3">
+				<field name="name">Resident Role 3</field>
+			</record>
+	</data>
+</odoo>

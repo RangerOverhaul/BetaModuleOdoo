@@ -5,7 +5,13 @@ from . import policy
 from . import addendum
 from . import endorsement 
 from . import bail
-
-
-
-
+from . import res_config_settings
+from . import resident_role
+from . import qr_code
+from . import res_partner
+from . import subproject
+from . import planning
+from . import task_history_image
+from . import task_history
+from . import task
+from . import project

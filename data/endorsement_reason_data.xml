@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo> 
+	<data noupdate="1">
+			<record model="lsv_project.endorsement_reason" id="lsv_project.endorsement_reason_1">
+				<field name="reason">Endorsement Reason 1</field>
+			</record>
+			<record model="lsv_project.endorsement_reason" id="lsv_project.endorsement_reason_2">
+				<field name="reason">Endorsement Reason 2</field>
+			</record>
+			<record model="lsv_project.endorsement_reason" id="lsv_project.endorsement_reason_3">
+				<field name="reason">Endorsement Reason 3</field>
+			</record>
+	</data>
+</odoo>
