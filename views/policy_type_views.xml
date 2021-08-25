@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<record id="lsv_project.policy_type_from" model="ir.ui.view">
+			<field name="name">lsv.project.policy.type.form</field>
+			<field name="model">lsv_project.policy_type</field>
+			<field name="arch" type="xml">
+				<form string="Policy Types">
+					<sheet>
+						<group>
+							<field name="name" string="name"/>
+						</group>
+					</sheet> 
+				</form>
+			</field>
+	</record>
+	<record id="lsv_project.policy_type_tree" model="ir.ui.view">
+		<field name="name">lsv.project.policy.type.tree</field>
+		<field name="model">lsv_project.policy_type</field>
+		<field name="arch" type="xml">
+			<tree default_order="name desc">
+				<field name="name"/>
+			</tree>		
+		</field>
+	</record>
+	<record id="lsv_project.policy_type_search" model="ir.ui.view">
+		<field name="name">lsv.project.policy.type.search</field>
+		<field name="model">lsv_project.policy_type</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="name"/>
+			</search>		
+		</field>
+	</record>
+	<record id="lsv_project.policy_type_window" model="ir.actions.act_window">
+		<field name="name">Policy Type</field>
+		<field name="view_mode">tree,form,search</field>
+		<field name="res_model">lsv_project.policy_type</field>
+	</record>
+	<menuitem
+		id="lsv_project.policy_type_menuitem"
+		name="Policy Type"
+		parent="lsv_project.settings_menuitem"
+		sequence="0"
+		groups="lsv_project.manager_group"
+		action="lsv_project.policy_type_window"
+		/>
+</odoo>

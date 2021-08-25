@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<menuitem
+		id="lsv_project.menu_root"
+		name="LSV Project"
+		groups="lsv_project.manager_group,lsv_project.user_group"
+		sequence="30"
+		/>
+	<menuitem
+		id="lsv_project.settings_menuitem"
+		name="Settings"
+		parent="lsv_project.menu_root"
+		groups="lsv_project.manager_group"
+		sequence="1"
+		/>
+</odoo>

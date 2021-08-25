@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<record id="lsv_project.view_partner_form" model="ir.ui.view">
+		<field name="name">lsv.project.view.partner.form</field>
+		<field name="model">res.partner</field>
+		<field name="inherit_id" ref="base.view_partner_form"></field>
+		<field name="arch" type="xml">
+			<xpath expr="//page[@name='internal_notes']" position="after">
+				<page name="project_page" string="Project Container">
+					<group name="project_container"> 
+						<field name="is_insurer" string="Is Insuerer?" attrs="{'invisible': [('is_company', '=', False)]}"/>
+						<field name="is_resident" string="Is Resident?"/>
+						<field name="identify_number" attrs="{'required': [('is_resident', '=', True)]}"/>
+						<field name="resident_role_id" string="Resident Role" attrs="{'invisible': [('is_resident', '=', False)]}"/>
+					</group>
+				</page>				
+			</xpath>
+		</field>
+	</record>
+</odoo>

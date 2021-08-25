@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<record id="lsv_project.planning_form" model="ir.ui.view">
+		<field name="name">lsv.project.planning.form</field>
+		<field name="model">lsv_project.planning</field>
+		<field name="arch" type="xml">
+			<form string="Planning">
+				<sheet>
+					<group>
+						<group>
+							<field name="responsible_id"/>
+							<field name="state"/>
+						</group>
+						<group>
+							<field name="start_on"/>
+							<field name="end_on"/>
+						</group>
+					</group>
+					<group>
+						<field name="task_ids"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="lsv_project.planning_window" model="ir.actions.act_window">
+		<field name="name">Planning</field>
+		<field name="res_model">lsv_project.planning</field>
+		<field name="view_mode">form</field>
+	</record>
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<record id="lsv_project.endorsement_reason_from" model="ir.ui.view">
+			<field name="name">lsv.project.endorsement.reason.form</field>
+			<field name="model">lsv_project.endorsement_reason</field>
+			<field name="arch" type="xml">
+				<form string="Endorsement Reason">
+					<sheet>
+						<group>
+							<field name="reason" string="reason"/>
+						</group>
+					</sheet> 
+				</form>
+			</field>
+	</record>
+	<record id="lsv_project.endorsement_reason_tree" model="ir.ui.view">
+		<field name="name">lsv.project.endorsement.reason.tree</field>
+		<field name="model">lsv_project.endorsement_reason</field>
+		<field name="arch" type="xml">
+			<tree default_order="reason desc">
+				<field name="reason"/>
+			</tree>		
+		</field>
+	</record>
+	<record id="lsv_project.endorsement_reason_search" model="ir.ui.view">
+		<field name="name">lsv.project.endorsement.reason.search</field>
+		<field name="model">lsv_project.endorsement_reason</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="reason"/>
+			</search>		
+		</field>
+	</record>
+	<record id="lsv_project.endorsement_reason_window" model="ir.actions.act_window">
+		<field name="name">Endorsement Reason</field>
+		<field name="view_mode">tree,form,search</field>
+		<field name="res_model">lsv_project.endorsement_reason</field>
+	</record>
+	<menuitem
+		id="lsv_project.endorsement_reason_menuitem"
+		name="Endorsement Reason"
+		parent="lsv_project.settings_menuitem"
+		sequence="0"
+		groups="lsv_project.manager_group"
+		action="lsv_project.endorsement_reason_window"
+		/>
+</odoo>

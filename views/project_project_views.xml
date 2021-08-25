@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<record id="lsv_project.project_edit_project" model="ir.ui.view">
+		<field name="name">lsv.project.project.edit.project</field>
+		<field name="model">project.project</field>
+		<field name="inherit_id" ref="project.edit_project"/>
+		<field name="arch" type="xml">
+			<xpath expr="/form/sheet/notebook/page[@name='settings']" position="after">
+				<page name="addendums" string="Addendums" groups="lsv_project.manager_group,lsv_project.user_group">
+					<field name="addendum_ids" string="Addendums">
+						<tree name="addendums" string="Addendums">
+							<field name="number" />
+							<field name="comments" />
+							<field name="addendum_description_id"/>
+							<field name="start_at"/>
+							<field name="end_at"/>
+							<field name="addendum_date"/>
+						</tree>
+					</field>
+				</page>
+				<page name="policys" string="Policys" groups="lsv_project.manager_group, lsv_project.user_group">
+					<field name="policy_ids" string="Policys">
+						<tree name="policys" string="Policys">
+							<field name="number" />
+							<field name="policy_type_id"/>
+						</tree>
+					</field>
+				</page>
+				<page name="bails" string="Bails" groups="lsv_project.manager_group, lsv_project.user_group">
+					<field name="bail_ids" string="Bails">
+						<tree name="bails" string="Bails">
+							<field name="number" />
+							<field name="issue_date"/>
+							<field name="expired_at"/>
+							<field name="insurer_id"/>
+							<field name="endorsement_ids"/>
+						</tree>
+					</field>
+				</page>
+				<page name="plannings" string="Plannings" groups="lsv_project.manager_group, lsv_project.user_group">
+					<field name="planning_id" string="Planning">
+						<tree name="planning" string="Planning">
+							<field name="start_on"/>
+							<field name="end_on"/>
+							<field name="responsible_id"/>
+							<field name="task_ids"/>
+						</tree>
+					</field>
+				</page>
+				<page name="subprojects" string="Subprojects" groups="lsv_project.manager_group, lsv_project.user_group">
+					<field name="subprojects_ids" string="Subprojects">
+						<tree name="subprojects" string="Subprojects">
+							<field name="name"/>
+						</tree>
+					</field>
+				</page>
+			</xpath>
+		</field>
+	</record>
+	<record id="lsv_project.project_edit_project_resident_id_field" model="ir.ui.view">
+		<field name="name">lsv.project.project.edit.resident.id.field</field>
+		<field name="model">project.project</field>
+		<field name="inherit_id" ref="project.edit_project"/>
+		<field name="arch" type="xml">
+			<xpath expr="/form/sheet/notebook/page/group/group/field[@name='user_id']" position="after">
+				<field name="resident_id" string="Resident"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>

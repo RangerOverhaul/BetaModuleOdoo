@@ -16,8 +16,9 @@ class Project(models.Model):
 		for project in self:
 			project.planning_count = len(project.planning_ids)
 
-	resident_id = fields.Many2one('res_partner',
-								  required=False)
+	resident_id = fields.Many2one('res.partner',
+								  required=False,
+								  domain=[('is_resident','=', 'True')])
 	qr_code_id = fields.Many2one('lsv_project.qr_code',
 								 required=False)
 	addendum_ids = fields.One2many('lsv_project.addendum',

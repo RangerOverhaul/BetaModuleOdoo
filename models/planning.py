@@ -21,13 +21,14 @@ class Planning(models.Model):
 		('finished','Finished'),
 	])
 
-	start_on = fields.Date(string='Date',
+	start_on = fields.Date(string='Start Date',
 						   required=True)
-	end_on = fields.Date(string='Date',
+	end_on = fields.Date(string='End Date',
 						 required=True)
-	responsible_id = fields.Many2one('res_partner',
-									 required=True)
+	responsible_id = fields.Many2one('res.partner',
+									 required=True,
+									 domain=[('is_resident','=', 'True')])
 	project_id = fields.Many2one('project.project',
 								 required=True)
-	task_id = fields.Many2many('project.task',
+	task_ids = fields.Many2many('project.task',
 							   required=True)

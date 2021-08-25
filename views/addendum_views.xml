@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<record id="lsv_project.addendum_form" model="ir.ui.view">
+		<field name="name">lsv.project.addendum.form</field>
+		<field name="model">lsv_project.addendum</field>
+		<field name="arch" type="xml">
+			<form string="Adedendum">
+				<sheet>
+					<group>
+						<group>
+							<field name="number"/>
+							<field name="addendum_description_id"/>
+							<field name="addendum_date"/>
+						</group>
+						<group>
+							<field name="start_at"/>
+							<field name="end_at"/>
+						</group>
+					</group>
+					<group>
+						<field name="comments" />
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="lsv_project.addendum_window" model="ir.actions.act_window">
+		<field name="name">Addendum</field>
+		<field name="res_model">lsv_project.addendum</field>
+		<field name="view_mode">form</field>
+	</record>
+</odoo>

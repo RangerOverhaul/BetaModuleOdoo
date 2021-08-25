@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<record id="lsv_project.subproject_form" model="ir.ui.view">
+		<field name="name">lsv.project.subproject.form</field>
+		<field name="model">lsv_project.subproject</field>
+		<field name="arch" type="xml">
+			<form string="Subproject">
+				<sheet>
+					<group>
+						<field name="name"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="lsv_project.subproject_window" model="ir.actions.act_window">
+		<field name="name">Subproject</field>
+		<field name="res_model">lsv_project.subproject</field>
+		<field name="view_mode">form</field>
+	</record>
+</odoo>

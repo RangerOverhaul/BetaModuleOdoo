@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<record id="lsv_project.addendum_policy" model="ir.ui.view">
+		<field name="name">lsv.project.policy.form</field>
+		<field name="model">lsv_project.policy</field>
+		<field name="arch" type="xml">
+			<form string="Policy">
+				<sheet>
+					<group>
+						<group>
+							<field name="number" />
+						</group>
+					</group>
+					<group>
+						<field name="policy_type_id"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="lsv_project.policy_window" model="ir.actions.act_window">
+		<field name="name">Policy</field>
+		<field name="res_model">lsv_project.policy</field>
+		<field name="view_mode">form</field>
+	</record>
+</odoo>

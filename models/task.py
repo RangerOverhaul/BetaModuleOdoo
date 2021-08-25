@@ -16,9 +16,9 @@ class Task(models.Model):
 	task_history_map = fields.Char(string='Map')
 
 	sub_project = fields.Many2one('lsv_project.subproject')
-
+	# cambio de True a False
 	qr_code = fields.Many2one('lsv_project.qr_code',
-							  required=True)
+							  required=False)
 	task_history_ids =fields.One2many('lsv_project.task_history',
 									  'task_id')
 	planning_ids = fields.Many2many('lsv_project.planning',

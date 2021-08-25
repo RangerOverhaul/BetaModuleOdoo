@@ -18,9 +18,9 @@ class Bail(models.Model):
 			                 required=True)
     expired_at = fields.Date(string='Expired at',
     						 required=True)
-    insurer_id= fields.Many2one('res.partner',
-				                string='Insurer',
-				                required=True)
+    insurer_id = fields.Many2one('res.partner',
+				                required=True,
+                                domain=[('is_insurer','=', 'True')])
     project_id = fields.Many2one('project.project',
 				                 string='Project',
 				                 required=True)
@@ -28,4 +28,5 @@ class Bail(models.Model):
     								  'bail_id',
 				                      string='Endorsement',
 				                      required=True)
+
 
